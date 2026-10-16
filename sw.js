@@ -1,5 +1,5 @@
 // Bump CACHE_VERSION on every release, or phones keep serving the old app.
-const CACHE_VERSION = 'swapcheck-v3';
+const CACHE_VERSION = 'swapcheck-v11';
 const CORE = ['./', './index.html', './manifest.json', './icon-192.png', './icon-512.png', './apple-touch-icon.png',
   './vendor/pdf.min.mjs', './vendor/pdf.worker.min.mjs'];  // pdf.js is bundled so imports work with no signal
 

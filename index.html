@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- SL Swap Check — built by Panupong Muangyai, Thai Lion Air cabin crew, DMK -->
+<!-- SL Swap Check v1.6 (16 October 2026) — built by Panupong Muangyai, Thai Lion Air cabin crew, DMK -->
 <html lang="en-GB" data-theme="light">
 <head>
 <meta charset="utf-8">
@@ -7,6 +7,9 @@
 <meta name="color-scheme" content="light dark">
 <meta name="author" content="Panupong Muangyai">
 <meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800;6..12,900&family=Noto+Sans+Thai:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAEuElEQVR42rVXPWsbWRQ9MyNZ6yhWbBUm65nYIDcxWtzsDwikEGiNG7OQH2DSOVKlKrUqVZJchDX+AW7UCCFjg0DdQiDFJMawIEFiyRvswrL14YykmbeFfF/eG40Ue9m9YDwz7+ndM+fec94bxdTC8AiG/ycU9wPVI/FY8qEzQM/p/BcAxtZXf/TWQ2cAv6FjrVzCws42hs6AP6frfwlkRMldCaYmj9ZMAMDJ6jq6jToAIGhERiudX3AgPtX/4JL4Jo0MnQF8qh/Le3kAQLtSxaDRhJ5IAgBC8RjmXr5Au1IFANyUj3CZe/dDECJrPtUPn/vtKbHf0AEAcy9f8AR+Q4eeSUsL0jj9b+aymEFgIhCf6hfLyFSvCSulA/7mYng9o9IAgJ5JQ08kOfhJQeBsRZVV0HM6WNjZ5m9z36AeIRDRmglladGzSYfOABazYSuj1GM9EIrHJErbleq9AbUrVdyUjwAA3UYdMwh41l9jDmxFhcacMR/Al9dv+PX81ia/D8VjfPFJcVM+QqtQRDOXxSP1MXyqHz2ng57T4b0lhlSCntPhHd5MveV0iiy0CsWpAPRMGvNbmwgaEayUDvDL7VeslUu8L3pOh4PQmDP6kamFmamF2Qdljjn9PnP6ffbx2XN2lkxJ99eHx+z68Jg/P0um2Fkyxa4Pj/m8s2SK/anMsI/PnvM/cR0aN7Uwe68+YR+UOVkFpOlozRxRecdEtGZK9H+afYpmLour3X18ef2Gz6PoNupg5xdclp9mn6JdqULPpBE0IpKtcwB9WFL9Rfdrpt7yHrja3cfQGSBoRLCws43lvTyudvc5iKARkcaCRgQWs/HXb7+jXakiWjOhJ5L4Sf/5OwBacH5rEyer65wJkpTYgD2ng9VyQZLeSulg5AF380W/WN7L49dvlwgomtQrxJBiamEmer4oJbc8iSFKTnPd7ug1JjZ2u1LFaXwDmjI7AiCqYNJiokTntza5X4gSFJkSx0me3UadM93MZWUAFrNhs1s+wYsBWmh5Ly+x5AZDSd3skTn1YUFTZsed0O1c4q5HjUgu+XnjFVZKB1LjXubewW/ovDEtZiOgaNwfurksfKoftiA+H/drRYWtqPCdX/CkRL+oglahCD2ThrK0yMsBAK1CEX1Y6DfquCkfcan1XCcNi9nyxuR+Y4vZOI1v8FKE4jHeOM1clrslJSZWJtWfglw0oGgSCNXLUjVlFt1GHVe7+7gpH+FkdR2n8Q1pIarztP3BC4j7bOmjTcELhMVsNHPZkXwSSX5N9e7Dkt6w26jz5moVigjFYyPWhB7QE0l8zf8xnQE3kKARgZ5JY61c4tRPOvGQ4dA8Oju2CkXoiSRC8Rhsdvv9UPhefTL1G8Bmt5I/kKGI9IoNS/d0LW7z0ZrJD7aeMpwUVHc9k0YoHuP9QCDcycR7Uk60ZqKZeislvxcDxAL1ASni88are32sBI0It3iyX+lcbmphWMy+16eYVzlahSK+Nf/mIGcQgN/QuYTJxMh6Xf2iPAgAgQgaESzv5aWzoki72BNkwe7kEoA7A3oQCAB4pD6GsrQ4tne0CkWw8wteoknJxU+zB4Nwg/GS76Sg5GMqoIGHAJmWaFpiin8AKGjzwT5AeGUAAAAASUVORK5CYII=">
 <title>SL Swap Check — cabin crew duty swap</title>
 <meta name="description" content="Check a cabin crew duty swap against Thai Lion Air flight time limitations.">
@@ -16,15 +19,13 @@
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <script>window.PDF_ROOTS = ['./vendor/', 'https://cdn.jsdelivr.net/npm/pdfjs-dist@5.6.205/legacy/build/'];</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800;6..12,900&family=Noto+Sans+Thai:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#EFF2F7; --card:#FFFFFF; --soft:#F4F6FA; --ink:#1B2740; --muted:#6B778D; --line:#E2E7EF;
-  --blue:#2F7BEA; --blue-soft:#E8F1FE; --on-blue:#FFFFFF;
-  --good:#12975A; --good-soft:#E4F5EC; --bad:#DD3A4E; --bad-soft:#FDECEF; --warn:#BF7D0D; --warn-soft:#FFF3DE;
-  --fdp:#2F7BEA; --hsby:#E2A200; --res:#8B6CD8; --off:#9AA5B8; --al:#2F9E7E; --rst:#7C8AA5;
+  --bg:#EFF2F7; --card:#FFFFFF; --soft:#F4F6FA; --ink:#1B2740; --muted:#616C81; --line:#E2E7EF;
+  --blue:#1C66D6; --blue-soft:#E8F1FE; --on-blue:#FFFFFF;
+  --good:#0E7A49; --good-soft:#E4F5EC; --bad:#C7273A; --bad-soft:#FDECEF; --warn:#8F5E09; --warn-soft:#FFF3DE;
+  --on-sem:#FFFFFF;   /* text on a green/red/amber bar */
+  --fdp:#1C66D6; --hsby:#8F5E09; --res:#6B4FBB; --off:#6E798E; --al:#0E7A49; --rst:#6E798E;
   --font:"Nunito Sans","Noto Sans Thai",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   --r-lg:22px; --r-md:16px; --r-sm:12px;
 }
@@ -32,15 +33,8 @@
   --bg:#1A2231; --card:#243047; --soft:#2B3750; --ink:#EEF2F8; --muted:#A9B4C8; --line:#35425B;
   --blue:#5E9BFF; --blue-soft:#2A3C5C; --on-blue:#0E1829;
   --good:#4FCB8B; --good-soft:#233F35; --bad:#FF7A89; --bad-soft:#482A33; --warn:#F2B55A; --warn-soft:#473A24;
+  --on-sem:#11161F;   /* the dark-mode bars are light, so their text is dark */
   --off:#7D879A; --al:#43B896; --rst:#8C99AF;
-}
-@media (prefers-color-scheme: dark){
-  :root[data-theme="auto"]{
-  --bg:#1A2231; --card:#243047; --soft:#2B3750; --ink:#EEF2F8; --muted:#A9B4C8; --line:#35425B;
-  --blue:#5E9BFF; --blue-soft:#2A3C5C; --on-blue:#0E1829;
-  --good:#4FCB8B; --good-soft:#233F35; --bad:#FF7A89; --bad-soft:#482A33; --warn:#F2B55A; --warn-soft:#473A24;
-  --off:#7D879A; --al:#43B896; --rst:#8C99AF;
-  }
 }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;height:100%}
@@ -49,7 +43,7 @@ button,input,textarea{font:inherit;color:inherit}
 button{cursor:pointer}
 :focus-visible{outline:3px solid color-mix(in srgb,var(--blue) 45%,transparent);outline-offset:2px}
 [hidden]{display:none!important}
-.app{max-width:560px;margin:0 auto;min-height:100%;padding-bottom:calc(150px + env(safe-area-inset-bottom))}
+.app{max-width:560px;margin:0 auto;min-height:100%;padding-bottom:calc(var(--tray-h,170px) + 24px)}
 
 /* app bar */
 .appbar{position:sticky;top:0;z-index:20;background:var(--bg);padding:calc(10px + env(safe-area-inset-top)) 16px 10px;display:flex;align-items:center;gap:12px}
@@ -66,7 +60,7 @@ button{cursor:pointer}
 .av{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-weight:900;font-size:14px;flex:none;background:var(--soft);color:var(--muted)}
 .who button[aria-selected="true"] .av{background:var(--blue);color:var(--on-blue)}
 .who b{display:block;font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.who small{display:block;color:var(--muted);font-size:13px;white-space:nowrap}
+.who small{display:block;color:var(--muted);font-size:14px;white-space:nowrap}
 .who .txt{min-width:0}
 
 .pad{padding:0 16px}
@@ -85,15 +79,15 @@ button{cursor:pointer}
 .tile:focus-within{outline:3px solid color-mix(in srgb,var(--blue) 45%,transparent);outline-offset:2px}
 .empty{background:var(--card);border-radius:var(--r-lg);padding:22px 18px;text-align:center;margin-bottom:12px}
 .empty h2{margin:6px 0 4px;font-size:20px;font-weight:900}
-.empty p{margin:0;color:var(--muted);font-size:15px}
+.empty p{margin:0;color:var(--muted);font-size:16px;line-height:1.45}
 .big-import{position:relative;display:flex;align-items:center;gap:14px;background:var(--blue);color:var(--on-blue);border-radius:var(--r-lg);padding:18px;margin-bottom:10px;font-weight:900;font-size:18px;text-align:left}
 .big-import small{display:block;font-weight:600;font-size:14px;opacity:.85}
 .big-import .ti{width:52px;height:52px;border-radius:16px;background:rgba(255,255,255,.18);display:grid;place-items:center;flex:none}
 .big-import input{position:absolute;inset:0;opacity:0;cursor:pointer}
 .big-import:focus-within{outline:3px solid color-mix(in srgb,var(--blue) 45%,transparent);outline-offset:3px}
-.msg{font-size:14px;font-weight:600;border-radius:var(--r-sm);padding:10px 12px;margin-bottom:12px}
+.msg{font-size:15px;font-weight:600;line-height:1.4;border-radius:var(--r-sm);padding:10px 12px;margin-bottom:12px}
 .msg.ok{background:var(--good-soft);color:var(--good)} .msg.err{background:var(--bad-soft);color:var(--bad)} .msg.info{background:var(--card);color:var(--muted)}
-.tip{font-size:14px;color:var(--muted);margin:2px 2px 10px}
+.tip{font-size:15px;color:var(--muted);margin:2px 2px 12px;line-height:1.4}
 
 /* duty list */
 .month{font-weight:900;font-size:15px;color:var(--muted);margin:16px 4px 8px}
@@ -107,8 +101,8 @@ button{cursor:pointer}
 .duty .body{flex:1;min-width:0;padding:10px 12px;display:flex;flex-direction:column;justify-content:center}
 .duty .l1{display:flex;align-items:center;gap:8px;font-weight:800;font-size:16px}
 .tag{font-size:12px;font-weight:800;padding:2px 8px;border-radius:99px;background:color-mix(in srgb,var(--c) 16%,transparent);color:color-mix(in srgb,var(--c) 80%,var(--ink))}
-.duty .l2{font-size:13px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.duty .l3{font-size:13px;font-weight:700;color:var(--bad)}
+.duty .l2{font-size:14px;color:var(--muted);line-height:1.4;overflow-wrap:anywhere}
+.duty .l3{font-size:14px;font-weight:700;color:var(--bad);line-height:1.4}
 .duty .side{display:flex;align-items:center;gap:2px;padding-right:8px}
 .check{width:30px;height:30px;border-radius:50%;border:2px solid var(--line);display:grid;place-items:center;color:transparent;flex:none}
 .duty.sel .check{background:var(--blue);border-color:var(--blue);color:var(--on-blue)}
@@ -120,7 +114,7 @@ button{cursor:pointer}
 .duty.off .l1{color:var(--muted);font-weight:700}
 .duty.locked{opacity:.85}
 .lock{margin-right:4px;font-size:11px;font-weight:800;color:var(--muted);text-align:center;width:30px;line-height:1.1}
-.listtools{display:flex;justify-content:center;margin:14px 0 6px}
+.listtools{display:flex;justify-content:center;margin:18px 0 10px}
 .linkish{border:0;background:transparent;color:var(--muted);font-weight:700;padding:8px;font-size:14px}
 
 /* swap tray (cart) */
@@ -128,13 +122,17 @@ button{cursor:pointer}
 .tray-in{max-width:540px;margin:0 auto;background:var(--card);border-radius:var(--r-lg);box-shadow:0 -2px 24px rgba(27,39,64,.14);padding:12px}
 .give{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px;margin-bottom:10px}
 .give .g{background:var(--soft);border-radius:var(--r-sm);padding:7px 10px;min-width:0}
-.give small{display:block;font-size:12px;color:var(--muted);font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.give b{display:block;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.give small{display:block;font-size:13px;color:var(--muted);font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.give b{display:block;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .give .x{color:var(--muted)}
+.tray .share{display:flex;justify-content:center;margin:-2px 0 8px}
+.tray .share button{border:0;background:transparent;color:var(--blue);font-weight:800;font-size:14px;padding:6px 10px}
+.tray .share button.done{color:var(--good)}
 .cta{width:100%;border:0;border-radius:var(--r-md);padding:15px;font-weight:900;font-size:17px;background:var(--soft);color:var(--muted);display:flex;align-items:center;justify-content:center;gap:10px}
-.cta.good{background:var(--good);color:#fff}
-.cta.bad{background:var(--bad);color:#fff}
+.cta.good{background:var(--good);color:var(--on-sem)}
+.cta.bad{background:var(--bad);color:var(--on-sem)}
 .cta.ready{background:var(--blue);color:var(--on-blue)}
+.cta.warn{background:var(--warn);color:var(--on-sem)}
 
 /* sheets */
 dialog.sheet{border:0;padding:0;margin:auto auto 0;width:100%;max-width:560px;max-height:92dvh;border-radius:24px 24px 0 0;background:var(--bg);color:var(--ink);overflow:hidden}
@@ -152,7 +150,8 @@ dialog.sheet[open]{animation:up .22s ease-out}
 .btn.ghost{background:var(--card);color:var(--ink);flex:0 0 auto}
 .btn.danger{background:var(--card);color:var(--bad);flex:0 0 auto}
 .group{background:var(--card);border-radius:var(--r-md);padding:12px}
-.group>label,.glabel{display:block;font-size:13px;font-weight:800;color:var(--muted);margin-bottom:8px}
+.group>label.toggle{display:flex;margin:0}
+.group>label:not(.toggle),.glabel{display:block;font-size:13px;font-weight:800;color:var(--muted);margin-bottom:8px}
 .chips{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .chips button{border:2px solid var(--line);background:var(--card);border-radius:var(--r-sm);padding:10px 4px;font-weight:800;font-size:14px;display:flex;flex-direction:column;align-items:center;gap:4px}
 .chips button i{width:10px;height:10px;border-radius:50%;background:var(--c)}
@@ -180,45 +179,53 @@ textarea{width:100%;min-height:160px;border:0;border-radius:var(--r-sm);backgrou
 .menu{display:grid;gap:8px}
 .menu button{border:0;background:var(--card);border-radius:var(--r-md);padding:15px 16px;text-align:left;font-weight:800;font-size:16px;display:flex;align-items:center;gap:12px}
 .menu button.red{color:var(--bad)}
-.info{background:var(--card);border-radius:var(--r-md);padding:12px 16px;font-size:14px;color:var(--muted)}
+.how{counter-reset:step;display:grid;gap:10px}
+.how li{list-style:none;display:grid;grid-template-columns:30px 1fr;gap:10px;align-items:start}
+.how li::before{counter-increment:step;content:counter(step);width:26px;height:26px;border-radius:50%;background:var(--blue-soft);color:var(--blue);font-weight:900;font-size:14px;display:grid;place-items:center}
+.how b{display:block;font-size:15px}
+.how span{font-size:15px;color:var(--muted);line-height:1.45}
+.info{background:var(--card);border-radius:var(--r-md);padding:14px 16px;font-size:15px;line-height:1.5;color:var(--muted)}
 .info ul{margin:6px 0 0;padding-left:18px}
 .info li{margin:4px 0}
-.credit{text-align:center;font-size:12px;color:var(--muted);opacity:.75;margin:6px 0 2px}
+.credit{text-align:center;font-size:13px;color:var(--muted);margin:8px 0 2px;line-height:1.5}
 
 /* receipt: colours pinned so it always reads like paper */
-.receipt{background:#FFFFFF;color:#1B2740;border-radius:14px;padding:18px 16px 16px;position:relative;box-shadow:0 1px 3px rgba(27,39,64,.08);font-size:14px}
+.receipt{background:#FFFFFF;color:#1B2740;border-radius:14px;padding:18px 16px 16px;position:relative;box-shadow:0 1px 3px rgba(27,39,64,.08);font-size:15px;line-height:1.5}
 .receipt::after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:9px;background:radial-gradient(circle at 6px 0,transparent 6px,#FFFFFF 6.5px) 0 0/12px 9px repeat-x}
 .rc-head{text-align:center}
 .rc-head b{display:block;font-size:17px;font-weight:900}
-.rc-head small{color:#6B778D}
+.rc-head small{color:#5B6679}
 .rule-line{border:0;border-top:1.5px dashed #D3D9E3;margin:12px 0}
 .rc-row{display:flex;justify-content:space-between;gap:10px;padding:2px 0}
-.rc-row span:first-child{color:#6B778D;white-space:nowrap}
+.rc-row span:first-child{color:#5B6679;white-space:nowrap}
 .rc-row span:last-child{text-align:right;font-weight:700}
 .stamp{margin:14px auto 4px;text-align:center;border-radius:14px;padding:12px}
 .stamp .big{font-size:26px;font-weight:900;line-height:1.1}
 .stamp p{margin:4px 0 0;font-size:14px}
-.stamp.good{background:#E4F5EC;color:#12975A} .stamp.bad{background:#FDECEF;color:#DD3A4E} .stamp.idle{background:#F4F6FA;color:#6B778D}
+.stamp.good{background:#E4F5EC;color:#0E7A49} .stamp.bad{background:#FDECEF;color:#C7273A} .stamp.warn{background:#FFF3DE;color:#8F5E09} .stamp.idle{background:#F4F6FA;color:#5B6679}
 .rc-person{margin-top:4px}
 .rc-person h3{display:flex;justify-content:space-between;align-items:center;margin:0 0 8px;font-size:16px;font-weight:900}
 .rc-badge{font-size:12px;font-weight:900;padding:3px 10px;border-radius:99px}
-.rc-badge.good{background:#E4F5EC;color:#12975A} .rc-badge.bad{background:#FDECEF;color:#DD3A4E}
+.rc-badge.good{background:#E4F5EC;color:#0E7A49} .rc-badge.bad{background:#FDECEF;color:#C7273A} .rc-badge.warn{background:#FFF3DE;color:#8F5E09}
 .it{display:grid;grid-template-columns:22px 1fr;gap:6px;padding:6px 0}
 .it .ic{font-weight:900}
-.it.fail .ic,.it.fail b{color:#DD3A4E} .it.warn .ic,.it.warn b{color:#BF7D0D} .it.pass .ic{color:#12975A}
-.it b{display:block;font-size:14px}
-.it p{margin:1px 0 0;color:#1B2740}
-.it small{color:#8A94A7;font-size:12px}
+.it.fail .ic,.it.fail b{color:#C7273A} .it.warn .ic,.it.warn b{color:#8F5E09} .it.company .ic,.it.company b,.it.note .ic,.it.note b{color:#8F5E09} .it.pass .ic{color:#0E7A49}
+.rc-sub{font-size:12px;font-weight:900;color:#5B6679;letter-spacing:.03em;text-transform:uppercase;margin:10px 0 2px}
+.rc-partial{background:#FFF3DE;color:#6F4D09;border-radius:10px;padding:10px 12px;font-size:14px;line-height:1.45;margin:4px 0 8px}
+.rc-partial b{display:block;color:#8F5E09}
+.it b{display:block;font-size:15px}
+.it p{margin:2px 0 0;color:#1B2740}
+.it small{color:#5B6679;font-size:12px}
 .rc-more{margin-top:6px}
-.rc-more summary{cursor:pointer;color:#2F7BEA;font-weight:800;list-style:none;padding:6px 0}
+.rc-more summary{cursor:pointer;color:#1C66D6;font-weight:800;list-style:none;padding:6px 0}
 .rc-more summary::-webkit-details-marker{display:none}
 .tl{margin:8px 0}
-.tl-row{display:grid;grid-template-columns:54px 1fr;align-items:center;height:20px;font-size:11px;color:#6B778D}
+.tl-row{display:grid;grid-template-columns:54px 1fr;align-items:center;height:20px;font-size:12px;color:#5B6679}
 .track{position:relative;height:12px;background:#F1F3F7;border-radius:6px;overflow:hidden}
 .seg{position:absolute;top:0;bottom:0;background:var(--c);border-radius:3px}
 .seg.moved{background:repeating-linear-gradient(135deg,var(--c) 0 4px,color-mix(in srgb,var(--c) 40%,white) 4px 7px)}
-.seg.badseg{box-shadow:inset 0 0 0 2px #DD3A4E}
-.rc-foot{text-align:center;color:#8A94A7;font-size:12px;margin-top:12px}
+.seg.badseg{box-shadow:inset 0 0 0 2px #C7273A}
+.rc-foot{text-align:center;color:#5B6679;font-size:12px;margin-top:12px;line-height:1.5}
 </style>
 </head>
 <body>
@@ -236,6 +243,7 @@ textarea{width:100%;min-height:160px;border:0;border-radius:var(--r-sm);backgrou
 
 <div class="tray"><div class="tray-in">
   <div class="give" id="give"></div>
+  <div class="share"><button type="button" id="copyBtn" hidden></button></div>
   <button class="cta" id="cta"></button>
 </div></div>
 
@@ -285,36 +293,57 @@ textarea{width:100%;min-height:160px;border:0;border-radius:var(--r-sm);backgrou
   <div class="sh-foot"><button type="button" class="btn ghost" data-close>Cancel</button><button type="button" class="btn" id="confirmOk" style="background:var(--bad)">Clear</button></div>
 </div></dialog>
 
+<!-- how to use -->
+<dialog class="sheet" id="helpSheet"><div class="sh">
+  <div class="sh-head"><h2>How to use</h2><button type="button" class="round" data-close aria-label="Close">✕</button></div>
+  <div class="sh-body">
+    <div class="group"><ul class="how">
+      <li><div><b>Put your roster in</b><span>eCrew → More → Personal Crew Schedule report → ⋮ Print → share → Save to Files. Then tap Import eCrew PDF here.</span></div></li>
+      <li><div><b>Add the other duty</b><span>Tap Friend at the top. Import their PDF, or just add the one duty they are giving you: Add duty, then date, report time and finish time.</span></div></li>
+      <li><div><b>Pick what is being traded</b><span>Tap the duty each of you gives. A blue tick means it is in the swap. Rest days and annual leave are locked.</span></div></li>
+      <li><div><b>Read the bar at the bottom</b><span>Green means the swap is fine. Red means the manual breaks. Amber means the manual is fine but the CMM swap guideline is not. Tap it for the reasons.</span></div></li>
+      <li><div><b>Fix anything the import got wrong</b><span>Tap ✎ on a duty to change the time, sectors or type.</span></div></li>
+    </ul></div>
+    <div class="info"><b style="color:var(--ink)">If you would rather not share your whole month</b>
+      <p style="margin:6px 0 0">Your side of the check only needs your own roster plus the single duty you would receive. Use <b>Copy duty to send</b> above the green bar to send that one line on LINE, like <b>24/10 1400 2310 2</b>. Your friend pastes it into Paste text on their own phone and checks their own side.</p>
+      <p style="margin:6px 0 0">Nothing leaves your phone. The PDF is read here and the rosters stay in this browser.</p>
+    </div>
+  </div>
+  <div class="sh-foot"><button type="button" class="btn" data-close>Got it</button></div>
+</div></dialog>
+
 <!-- menu -->
 <dialog class="sheet" id="menuSheet"><div class="sh">
   <div class="sh-head"><h2>Menu</h2><button type="button" class="round" data-close aria-label="Close">✕</button></div>
   <div class="sh-body">
     <div class="group"><span class="glabel">Appearance</span>
-      <div class="chips" id="themeChips">
+      <div class="chips" id="themeChips" style="grid-template-columns:1fr 1fr">
         <button type="button" data-theme-set="light" aria-pressed="false">Light</button>
         <button type="button" data-theme-set="dark" aria-pressed="false">Dark</button>
-        <button type="button" data-theme-set="auto" aria-pressed="false">Auto</button>
       </div>
     </div>
     <div class="menu">
+      <button type="button" id="mHelp">❔ How to use</button>
       <button type="button" id="mExample">▶︎ Try an example</button>
       <button type="button" id="mUnselect">↺ Clear swap selection</button>
       <button type="button" class="red" id="mReset">🗑 Clear both rosters</button>
     </div>
     <div class="info"><b style="color:var(--ink)">What gets checked</b>
       <ul>
-        <li>Flight duty limit (Table 2 and extension table), rest before each flight, a night's sleep after a late finish before an early start, standby 16h, duty hours in 7, 14 and 28 days, and a 36-hour break every 7 days.</li>
-        <li>From the PDF: report time, debrief minus 30 minutes as on-blocks, routes, layovers. Sectors marked * are positioning and don't count. Days off, rest days and annual leave come in separately. Rest days and leave are locked, so they can't be put in a swap.</li>
-        <li>Night means 22:00–08:00, early start is a report 05:00–05:59, late finish is 23:00–01:59 (standard EASA meanings).</li>
-        <li>Not checked: flight hours, acclimatisation, hotel travel time, section 7.1.7.</li>
+        <li>Flight duty limits, from Table 2 and the extension table.</li>
+        <li>Rest before every flight, and a night's sleep between a late finish and an early start.</li>
+        <li>Standby and reserve length. Duty hours over 7, 14 and 28 days.</li>
+        <li>A 36-hour break at least every 7 days.</li>
+        <li>CMM swap guideline, shown in amber: finish by 23:00 before a day off, no start before 06:00 after one, the system closed on the 11th–16th, and 3 days notice.</li>
       </ul>
-      <p style="margin:8px 0 0">Unofficial helper. Crew scheduling has the final say. PDFs stay on your phone.</p>
+      <p style="margin:10px 0 0">Not checked: flight hours, acclimatisation, hotel travel time, section 7.1.7. You get 4 swap tickets a month, counting both sides.</p>
+      <p style="margin:10px 0 0">Unofficial helper. Crew scheduling has the final say. PDFs stay on your phone.</p>
     </div>
     <div class="info"><b style="color:var(--ink)">Rules version</b>
       <p style="margin:6px 0 0" id="revFull"></p>
       <p style="margin:6px 0 0">If the manual is revised, we will update as soon as possible.</p>
     </div>
-    <p class="credit">Made by Panupong Muangyai, cabin crew, DMK</p>
+    <p class="credit">Made by Panupong Muangyai, cabin crew, DMK<br><span id="appVer"></span></p>
   </div>
 </div></dialog>
 
@@ -486,13 +515,87 @@ const FTL = (() => {
     return { duties: D, results: out, stats };
   }
 
-  function runSwap(me, fr) {
+  // ==========================================================================
+  //  COMPANY SWAP GUIDELINE (CMM "Guideline for Roster Swap")
+  //  These sit on top of chapter 7 — the company can be stricter than the
+  //  manual. Edit the numbers here if CMM changes the guideline.
+  // ==========================================================================
+  const CO = {
+    finishBeforeOff: 23 * 60,     // last duty before a day off must finish by 23:00
+    earliestAfterOff: 6 * 60,     // first duty after a day off not before 06:00
+    restAfterOff: 36 * 60,        // ...and not before end of the last duty + 36h
+                                  // (CMM writes this as "end duty time + 12 hours", which is
+                                  //  the same clock time when there is one day off between)
+    closedFrom: 11, closedTo: 16, reopen: 17,   // CDIC swap window closed 11th-16th
+    noticeDays: 3,                // request at least 3 days before the duty
+    tickets: 4                    // swap tickets per crew member per month
+  };
+
+  // today = { idx: day number like dayIdx(), dom: day of month } or null
+  function company(raw, today) {
+    const out = [];
+    const add = (status, rule, text, ids = []) => out.push({ status, rule, ref: 'CMM swap guideline', text, ids });
+    const duties = raw.filter(d => !['OFF', 'AL', 'RST'].includes(d.type) && complete(d)).map(normalize).sort((a, b) => a.s - b.s);
+    const freeDays = new Set(raw.filter(d => ['OFF', 'AL', 'RST'].includes(d.type) && d.date).map(d => dayIdx(d.date)));
+    const busyDays = new Set(duties.map(d => Math.floor(d.s / DAY)));
+    // A day counts as off when the roster says so, or when it has no duty and
+    // sits inside the imported range (outside it, we simply don't know).
+    const days = [...busyDays, ...freeDays];
+    const lo = Math.min(...days), hi = Math.max(...days);
+    const isFree = i => freeDays.has(i) || (!busyDays.has(i) && i > lo && i < hi);
+
+    for (const f of duties) {
+      if (f.type !== 'FDP') continue;
+      const endDay = Math.floor(f.dutyEnd / DAY), startDay = Math.floor(f.s / DAY);
+      const dayName = `flight on ${labelDate(startDay)}`;
+
+      // finish by 23:00 when the next day is off ("finish" = on-blocks of the last sector)
+      const landDay = Math.floor((f.e - 1) / DAY);
+      if (isFree(landDay + 1)) {
+        const cutoff = landDay * DAY + CO.finishBeforeOff;
+        if (f.e > cutoff)
+          add('company', 'Finish before a day off', `The ${dayName} lands at ${clock(f.e)} and the next day is off. CMM asks for a finish by ${clock(CO.finishBeforeOff)}, as the buffer that keeps the 2 local nights safe.`, [f.id]);
+      }
+
+      // start no earlier than 06:00, and no earlier than last duty end + 12h
+      if (isFree(startDay - 1)) {
+        const prev = duties.filter(d => d.dutyEnd <= f.s).pop();
+        const byClock = startDay * DAY + CO.earliestAfterOff;
+        const byRest = prev ? prev.dutyEnd + CO.restAfterOff : -Infinity;
+        const earliest = Math.max(byClock, byRest);
+        if (f.s < earliest) {
+          const why = earliest === byRest
+            ? `your last duty ended ${when(prev.dutyEnd)}, so the ${dur(CO.restAfterOff)} break (CMM: end of duty + 12 hours) runs to ${clock(earliest)}`
+            : `CMM sets ${clock(CO.earliestAfterOff)} as the earliest start after a day off`;
+          add('company', 'Start after a day off', `The ${dayName} reports at ${clock(f.s)}, the day after a day off. The earliest is ${clock(earliest)} — ${why}.`, [f.id]);
+        }
+      }
+    }
+
+    if (today) {
+      if (today.dom >= CO.closedFrom && today.dom <= CO.closedTo)
+        add('note', 'Swap system is closed today', `CDIC suspends swap requests from the ${CO.closedFrom}th to the ${CO.closedTo}th while the new roster is built. It opens again on the ${CO.reopen}th at 00:00.`);
+      const soon = duties.filter(d => d.moved).map(d => Math.floor(d.s / DAY) - today.idx).filter(n => n >= 0).sort((a, b) => a - b)[0];
+      if (soon !== undefined && soon < CO.noticeDays)
+        add('note', 'Less than 3 days notice', `A duty in this swap is ${soon === 0 ? 'today' : soon === 1 ? 'tomorrow' : `in ${soon} days`}. Requests should go in at least ${CO.noticeDays} days before the duty date.`);
+    }
+    return out;
+  }
+
+  function runSwap(me, fr, today) {
     const key = r => r.rule + '|' + r.text;
     const person = (before, after) => {
       const b = check(before), a = check(after), bk = new Set(b.results.filter(r => r.status === 'fail').map(key));
       a.results.forEach(r => r.isNew = r.status === 'fail' && !bk.has(key(r)));
       const fails = a.results.filter(r => r.status === 'fail');
-      return { before: b, after: a, fails, newFails: fails.filter(r => r.isNew), oldFails: fails.filter(r => !r.isNew), warns: a.results.filter(r => r.status === 'warn') };
+      const coBefore = new Set(company(before, today).filter(r => r.status === 'company').map(key));
+      const coAfter = company(after, today);
+      coAfter.forEach(r => r.isNew = r.status === 'company' && !coBefore.has(key(r)));
+      return { before: b, after: a, fails, newFails: fails.filter(r => r.isNew), oldFails: fails.filter(r => !r.isNew),
+               warns: a.results.filter(r => r.status === 'warn'),
+               company: coAfter.filter(r => r.status === 'company' && r.isNew),
+               companyOld: coAfter.filter(r => r.status === 'company' && !r.isNew),
+               notes: coAfter.filter(r => r.status === 'note') };
     };
     const tag = arr => arr.map(d => ({ ...d, moved: true }));
     return {
@@ -500,7 +603,7 @@ const FTL = (() => {
       friend: person([...fr.give, ...fr.others], [...fr.others, ...tag(me.give)]),
     };
   }
-  return { check, runSwap, normalize, complete, dur, clock, when, labelDate, dayIdx, dateOf, DAY, TYPES, maxFdp, maxFdpExt, LIM, MANUAL };
+  return { check, runSwap, company, CO, normalize, complete, dur, clock, when, labelDate, dayIdx, dateOf, DAY, TYPES, maxFdp, maxFdpExt, LIM, MANUAL };
 })();
 
 
@@ -610,6 +713,12 @@ const $ = s => document.querySelector(s);
    Update these three lines whenever the manual changes, together with the
    limits in the FTL engine above (search for "Table 2", "TX" and "7.1.13"). */
 const RULES = { manual: 'Cabin Crew Manual, chapter 7', issue: 'Issue SL003, Rev 00', date: '1 March 2026' };
+
+/* ===== App version — bump this on every release you upload =====
+   Shown in the ⋯ menu and at the foot of the result, so crew can tell you
+   which version they are looking at. Keep the same number in sw.js
+   (CACHE_VERSION) so phones pick the new files up. */
+const APP = { version: '1.6', date: '16 October 2026' };
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const uid = () => Math.random().toString(36).slice(2, 10);
 const pad = n => String(n).padStart(2, '0');
@@ -677,7 +786,7 @@ function renderRoster() {
   let h = '';
   const list = p.duties.filter(ready).sort((a, b) => sortKey(a) - sortKey(b));
   if (!list.length) {
-    h += `<div class="empty"><h2>${w === 'me' ? 'Add your roster' : 'Add your friend’s roster'}</h2><p>The fastest way is the PDF from eCrew: Personal Crew Schedule Report.</p></div>
+    h += `<div class="empty"><h2>${w === 'me' ? 'Add your roster' : 'Add your friend’s roster'}</h2><p>The fastest way is the PDF from eCrew: Personal Crew Schedule Report.${w === 'friend' ? ' Or just add the one duty they are giving you.' : ''}</p><p style="margin-top:8px"><button class="linkish" data-help style="color:var(--blue)">How to use</button></p></div>
       <label class="big-import"><span class="ti">${ICONS.pdf}</span><span>Import eCrew PDF<small>Choose the file from your phone</small></span><input type="file" accept="application/pdf,.pdf" data-import="${w}" aria-label="Import eCrew PDF"></label>
       <div class="tiles" style="grid-template-columns:1fr 1fr"><button class="tile" data-add><span class="ti">${ICONS.plus}</span>Add manually</button><button class="tile" data-paste><span class="ti">${ICONS.paste}</span>Paste text</button></div>`;
     if (msgs[w]) h += `<div class="msg ${msgs[w][0]}">${esc(msgs[w][1])}</div>`;
@@ -710,6 +819,33 @@ function renderRoster() {
   el.innerHTML = h;
 }
 
+/* ---------- send one duty to the other person ---------- */
+function dutyLine(d) {
+  const dt = dayOf(d), dm = `${pad(dt.getUTCDate())}/${pad(dt.getUTCMonth() + 1)}`;
+  if (d.type === 'OFF') return `${dm} off`;
+  if (d.type === 'HSBY') return `${dm} ${d.start.replace(':', '')} ${d.end.replace(':', '')} standby`;
+  if (d.type === 'RES') return `${dm} ${d.start.replace(':', '')} ${d.end.replace(':', '')} reserve`;
+  return `${dm} ${d.start.replace(':', '')} ${d.end.replace(':', '')} ${d.sectors}${d.away ? ' away' : ''}`;
+}
+async function copyText(text) {
+  try { await navigator.clipboard.writeText(text); return true; } catch (e) {}
+  try {  // older iOS, or a page served without https
+    const ta = document.createElement('textarea');
+    ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select();
+    const ok = document.execCommand('copy'); ta.remove(); return ok;
+  } catch (e) { return false; }
+}
+$('#copyBtn').onclick = async () => {
+  const mine = S.me.duties.filter(d => d.swap && ready(d)).sort((a, b) => sortKey(a) - sortKey(b));
+  if (!mine.length) return;
+  const btn = $('#copyBtn');
+  const ok = await copyText(mine.map(dutyLine).join('\n'));
+  btn.textContent = ok ? '✓ Copied — paste it to them on LINE' : 'Copy failed, hold to select instead';
+  btn.classList.toggle('done', ok);
+  setTimeout(() => { btn.classList.remove('done'); renderTray(); }, 2500);
+};
+
 /* ---------- swap tray + result ---------- */
 let result = null;
 function compute() {
@@ -717,9 +853,13 @@ function compute() {
   const g = { me: give('me'), friend: give('friend') };
   if (!g.me.length && !g.friend.length) return (result = null);
   const others = w => S[w].duties.filter(d => !d.swap && ready(d));
-  const r = FTL.runSwap({ give: g.me, others: others('me') }, { give: g.friend, others: others('friend') });
+  const n = new Date();
+  const today = { idx: FTL.dayIdx(`${n.getFullYear()}-${pad(n.getMonth() + 1)}-${pad(n.getDate())}`), dom: n.getDate() };
+  const r = FTL.runSwap({ give: g.me, others: others('me') }, { give: g.friend, others: others('friend') }, today);
   r.g = g;
   r.bad = r.me.newFails.length + r.friend.newFails.length;
+  r.co = r.me.company.length + r.friend.company.length;
+  r.notes = [...r.me.notes, ...r.friend.notes].filter((x, i, a) => a.findIndex(y => y.rule === x.rule) === i);
   return (result = r);
 }
 function renderTray() {
@@ -730,12 +870,17 @@ function renderTray() {
     return `<div class="g"><small>${w === 'me' ? 'You give' : esc(friendName()) + ' gives'}</small><b>${esc(txt)}</b></div>`;
   };
   $('#give').innerHTML = `${side('me')}<span class="x" aria-hidden="true">⇄</span>${side('friend')}`;
+  const mine = S.me.duties.filter(d => d.swap && ready(d)).length, copyBtn = $('#copyBtn');
+  copyBtn.hidden = !mine;
+  if (mine) copyBtn.textContent = `⧉ Copy ${mine > 1 ? 'my duties' : 'my duty'} to send`;
+  measureTray();
   const cta = $('#cta');
   if (!result) { cta.className = 'cta'; cta.textContent = 'Tap duties to swap'; }
   else if (result.bad) { cta.className = 'cta bad'; cta.innerHTML = `✕ Breaks ${result.bad} rule${result.bad > 1 ? 's' : ''}, see why`; }
+  else if (result.co) { cta.className = 'cta warn'; cta.innerHTML = `⚠ Against company guideline, see why`; }
   else { cta.className = 'cta good'; cta.innerHTML = '✓ OK to swap, see details'; }
 }
-const itemHTML = r => `<div class="it ${r.status}"><span class="ic">${r.status === 'fail' ? '✕' : r.status === 'warn' ? '!' : '✓'}</span><div><b>${esc(r.rule)}</b><p>${esc(r.text)}</p>${r.ref ? `<small>Rule ${esc(r.ref)}</small>` : ''}</div></div>`;
+const itemHTML = r => `<div class="it ${r.status}"><span class="ic">${r.status === 'fail' ? '✕' : r.status === 'warn' || r.status === 'company' || r.status === 'note' ? '⚠' : '✓'}</span><div><b>${esc(r.rule)}</b><p>${esc(r.text)}</p>${r.ref ? `<small>${r.status === 'company' || r.status === 'note' ? '' : 'Rule '}${esc(r.ref)}</small>` : ''}</div></div>`;
 function timeline(p) {
   const D = p.after.duties; if (!D.length) return '';
   const bad = new Set(p.fails.flatMap(r => r.ids)), col = { FDP: '#2F7BEA', HSBY: '#E2A200', RES: '#8B6CD8' };
@@ -748,11 +893,30 @@ function timeline(p) {
   }
   return h + '</div>';
 }
+// Enough roster to judge? The days around each incoming duty must be known.
+function partialRoster(w, p) {
+  const entered = new Set(S[w].duties.filter(ready).map(d => FTL.dayIdx(d.date)));
+  const moved = p.after.duties.filter(d => d.moved);
+  if (!moved.length) return null;
+  const days = entered.size;
+  const blind = moved.some(d => {
+    const i = Math.floor(d.s / FTL.DAY);
+    return !entered.has(i - 1) || !entered.has(i + 1);
+  });
+  if (!blind && days >= 5) return null;
+  return `<div class="rc-partial"><b>Only part of this roster is here</b>${days} day${days === 1 ? '' : 's'} entered, so rest and duty totals for ${esc(label(w))} can't be judged properly. Add the days either side of the swap, or ask them to run the check on their own phone.</div>`;
+}
 function personReceipt(w, p) {
-  const n = p.newFails.length, st = p.after.stats;
-  const notes = [...p.warns, ...p.oldFails];
-  return `<div class="rc-person"><h3><span>${esc(label(w))}</span><span class="rc-badge ${n ? 'bad' : 'good'}">${n ? `${n} problem${n > 1 ? 's' : ''}` : 'OK'}</span></h3>
-    ${n ? p.newFails.map(itemHTML).join('') : '<div class="it pass"><span class="ic">✓</span><div><b>Nothing breaks after the swap</b></div></div>'}
+  const n = p.newFails.length, co = p.company.length, st = p.after.stats;
+  const partial = partialRoster(w, p);
+  const notes = [...p.warns, ...p.oldFails, ...p.companyOld];
+  const badge = n ? `<span class="rc-badge bad">${n} problem${n > 1 ? 's' : ''}</span>`
+    : co ? `<span class="rc-badge warn">Check with CMM</span>`
+    : partial ? `<span class="rc-badge warn">Not fully checked</span>` : `<span class="rc-badge good">OK</span>`;
+  return `<div class="rc-person"><h3><span>${esc(label(w))}</span>${badge}</h3>
+    ${partial || ''}
+    ${n ? p.newFails.map(itemHTML).join('') : co ? '' : `<div class="it pass"><span class="ic">✓</span><div><b>Nothing breaks${partial ? ' in what is entered' : ' after the swap'}</b></div></div>`}
+    ${co ? `<div class="rc-sub">Company guideline</div>${p.company.map(itemHTML).join('')}` : ''}
     <div class="rc-row"><span>Duty, 7 days</span><span>${FTL.dur(st.duty7)} / 60h</span></div>
     <div class="rc-row"><span>Duty, 28 days</span><span>${FTL.dur(st.duty28)} / 190h</span></div>
     <details class="rc-more"><summary>More detail</summary>
@@ -766,16 +930,32 @@ function renderReceipt() {
   const now = new Date();
   const lines = w => r.g[w].length ? r.g[w].sort((a, b) => sortKey(a) - sortKey(b)).map(d => `<div class="rc-row"><span>${w === 'me' ? 'You give' : esc(friendName()) + ' gives'}</span><span>${esc(short(d))}${d.type === 'FDP' ? ` · ${d.sectors} sec` : !FREE.includes(d.type) ? ` · ${TYPES[d.type].name}` : ''}</span></div>`).join('') : `<div class="rc-row"><span>${w === 'me' ? 'You give' : esc(friendName()) + ' gives'}</span><span>Nothing</span></div>`;
   const stamp = r.bad
-    ? `<div class="stamp bad"><div class="big">✕ Not allowed</div><p>${['me', 'friend'].filter(w => r[w].newFails.length).map(label).join(' and ')} would break the rules.</p></div>`
-    : `<div class="stamp good"><div class="big">✓ OK to swap</div><p>No limits exceeded for either of you.</p></div>`;
+    ? `<div class="stamp bad"><div class="big">✕ Not allowed</div><p>${['me', 'friend'].filter(w => r[w].newFails.length).map(label).join(' and ')} would break the manual.</p></div>`
+    : r.co
+    ? `<div class="stamp warn"><div class="big">⚠ Against the guideline</div><p>The manual is fine, but CMM's swap guideline says no. See below.</p></div>`
+    : (() => {
+        const thin = ['me', 'friend'].filter(w => partialRoster(w, r[w])).map(label);
+        return `<div class="stamp good"><div class="big">✓ OK to swap</div><p>${thin.length
+          ? `Nothing breaks in what is entered. ${thin.join(' and ')} ${thin.length > 1 ? 'have' : 'has'} only part of the roster here, so that side needs checking too.`
+          : 'No limits exceeded, and the company guideline is met.'}</p></div>`;
+      })();
   el.innerHTML = `<div class="receipt">
     <div class="rc-head"><b>Duty swap check</b><small>${now.getDate()} ${MONTHS[now.getMonth()].slice(0, 3)} ${now.getFullYear()}, ${pad(now.getHours())}:${pad(now.getMinutes())}</small></div>
     <hr class="rule-line">${lines('me')}${lines('friend')}<hr class="rule-line">
     ${stamp}
     <hr class="rule-line">${personReceipt('me', r.me)}<hr class="rule-line">${personReceipt('friend', r.friend)}
-    <div class="rc-foot">Unofficial check. Crew scheduling has the final say.<br>SL Swap Check by Panupong Muangyai</div>
+    ${r.notes.length ? `<hr class="rule-line"><div class="rc-sub">Before you send the request</div>${r.notes.map(itemHTML).join('')}` : ''}
+    <div class="rc-foot">Unofficial check. Crew scheduling has the final say.<br>SL Swap Check v${APP.version} by Panupong Muangyai</div>
   </div>`;
 }
+// Keep the last row of the list clear of the floating tray.
+function measureTray() {
+  const t = document.querySelector('.tray');
+  if (t) document.documentElement.style.setProperty('--tray-h', t.offsetHeight + 'px');
+}
+if (window.ResizeObserver) new ResizeObserver(measureTray).observe(document.querySelector('.tray'));
+addEventListener('resize', measureTray);
+
 $('#cta').onclick = () => {
   if (!result) { if (!S[S.view].duties.length) return; document.querySelector('.duty:not(.sel)')?.focus(); return; }
   renderReceipt(); $('#resultSheet').showModal();
@@ -790,6 +970,7 @@ document.addEventListener('click', e => {
   const v = t.closest('[data-view]'); if (v) { S.view = v.dataset.view; save(); renderAll(); window.scrollTo({ top: 0 }); return; }
   if (t.closest('[data-add]')) return openEditor(null);
   if (t.closest('[data-paste]')) return openPaste();
+  if (t.closest('[data-help]')) return $('#helpSheet').showModal();
   if (t.closest('[data-clear]')) { const w = S.view; askConfirm(w === 'me' ? 'Clear my roster?' : 'Clear friend’s roster?', 'The duties on this roster will be removed.', 'Clear roster', () => { S[w] = { ...S[w], duties: [], crewId: '' }; msgs[w] = null; save(); renderAll(); }); return; }
   const card = t.closest('.duty'); if (!card) return;
   const d = S[S.view].duties.find(x => x.id === card.dataset.id); if (!d) return;
@@ -948,17 +1129,28 @@ $('#pasteForm').onsubmit = e => {
 
 /* ---------- theme ---------- */
 const THEME_KEY = 'swapcheck.theme';
-function setTheme(t) {
-  document.documentElement.dataset.theme = t;
-  try { localStorage.setItem(THEME_KEY, t); } catch (e) {}
-  document.querySelectorAll('[data-theme-set]').forEach(b => b.setAttribute('aria-pressed', b.dataset.themeSet === t));
+const darkQuery = window.matchMedia ? matchMedia('(prefers-color-scheme: dark)') : null;
+let themePref = 'light';
+try {
+  const saved = localStorage.getItem(THEME_KEY);
+  // "auto" was dropped: keep whatever it was showing at the time.
+  themePref = saved === 'auto' ? (darkQuery && darkQuery.matches ? 'dark' : 'light') : (saved || 'light');
+  if (saved === 'auto') localStorage.setItem(THEME_KEY, themePref);
+} catch (e) {}
+function applyTheme() {
+  const resolved = themePref === 'dark' ? 'dark' : 'light';
+  document.documentElement.dataset.theme = resolved;
+  document.querySelectorAll('[data-theme-set]').forEach(b => b.setAttribute('aria-pressed', b.dataset.themeSet === themePref));
   const meta = document.querySelector('meta[name=theme-color]');
-  if (meta) meta.content = getComputedStyle(document.documentElement).getPropertyValue('--bg').trim() || '#D30310';
+  if (meta) meta.content = getComputedStyle(document.documentElement).getPropertyValue('--bg').trim() || '#EFF2F7';
+}
+function setTheme(t) {
+  themePref = t;
+  try { localStorage.setItem(THEME_KEY, t); } catch (e) {}
+  applyTheme();
 }
 document.addEventListener('click', e => { const b = e.target.closest('[data-theme-set]'); if (b) setTheme(b.dataset.themeSet); });
-let startTheme = 'light';
-try { startTheme = localStorage.getItem(THEME_KEY) || 'light'; } catch (e) {}
-setTheme(startTheme);
+applyTheme();
 
 /* ---------- confirm ---------- */
 let confirmAction = null;
@@ -971,6 +1163,7 @@ $('#confirmOk').onclick = () => { $('#confirmSheet').close(); const fn = confirm
 
 /* ---------- menu ---------- */
 $('#menuBtn').onclick = () => $('#menuSheet').showModal();
+$('#mHelp').onclick = () => { $('#menuSheet').close(); $('#helpSheet').showModal(); };
 $('#mUnselect').onclick = () => { for (const w of ['me', 'friend']) S[w].duties.forEach(d => d.swap = false); save(); $('#menuSheet').close(); renderAll(); };
 $('#mReset').onclick = () => { $('#menuSheet').close(); askConfirm('Clear both rosters?', 'Everything in the app will be removed.', 'Clear everything', () => { S = fresh(); msgs.me = msgs.friend = null; save(); renderAll(); }); };
 $('#mExample').onclick = () => {
@@ -987,9 +1180,11 @@ $('#mExample').onclick = () => {
 };
 
 $('#revLine').textContent = RULES.manual;
+$('#appVer').textContent = `App version ${APP.version} · ${APP.date}`;
 $('#revFull').textContent = `${RULES.manual} — ${RULES.issue}, ${RULES.date}.`;
 
 renderAll();
+measureTray();
 })();
 
 // Service worker: full offline use after the first visit
